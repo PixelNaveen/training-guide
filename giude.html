@@ -1,0 +1,1939 @@
+<!----html--->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cold Calling Assistant Guide - Complete Training Manual</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea8a 0%, #764ba281 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+      header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px 30px;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      header p {
+        font-size: 1.2em;
+        opacity: 0.95;
+        margin-bottom: 10px;
+      }
+      .nav-tabs {
+        display: flex;
+        background: #f8f9fa;
+        border-bottom: 3px solid #dee2e6;
+        overflow-x: auto;
+        flex-wrap: wrap;
+      }
+      .nav-tab {
+        padding: 18px 28px;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        font-size: 1.05em;
+        font-weight: 600;
+        color: #495057;
+        transition: all 0.3s;
+        white-space: nowrap;
+      }
+      .nav-tab:hover {
+        background: #e9ecef;
+        color: #667eea;
+      }
+      .nav-tab.active {
+        background: white;
+        color: #667eea;
+        border-bottom: 4px solid #667eea;
+      }
+      .content {
+        padding: 40px;
+      }
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+        animation: fadeIn 0.4s;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .section-title {
+        color: #667eea;
+        font-size: 2em;
+        margin: 35px 0 25px 0;
+        border-bottom: 4px solid #667eea;
+        padding-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .script-box {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-left: 6px solid #667eea;
+        padding: 25px;
+        margin: 25px 0;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .script-box h3 {
+        color: #667eea;
+        margin-bottom: 18px;
+        font-size: 1.4em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .script-text {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 1.08em;
+        line-height: 1.8;
+        margin: 12px 0;
+        border: 2px solid #e9ecef;
+      }
+      .objection-card {
+        background: white;
+        border: 3px solid #dee2e6;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 20px 0;
+        transition: all 0.3s;
+      }
+      .objection-card:hover {
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+        transform: translateY(-3px);
+        border-color: #667eea;
+      }
+      .objection-title {
+        color: #dc3545;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .objection-response {
+        color: #28a745;
+        font-weight: 700;
+        margin-top: 18px;
+        margin-bottom: 12px;
+        font-size: 1.15em;
+      }
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+        margin: 30px 0;
+      }
+      .pricing-card {
+        background: white;
+        border: 3px solid #dee2e6;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        transition: all 0.3s;
+      }
+      .pricing-card:hover {
+        border-color: #667eea;
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.25);
+        transform: translateY(-5px);
+      }
+      .pricing-card.featured {
+        border-color: #28a745;
+        background: linear-gradient(135deg, #f8fff9 0%, #e8f5e9 100%);
+        border-width: 4px;
+      }
+      .pricing-card h3 {
+        font-size: 1.6em;
+        margin-bottom: 15px;
+        color: #495057;
+      }
+      .price {
+        font-size: 3em;
+        color: #667eea;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      .featured .price {
+        color: #28a745;
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+        margin: 30px 0;
+      }
+      .stat-card {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        transition: all 0.3s;
+      }
+      .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+      .stat-number {
+        font-size: 3em;
+        font-weight: bold;
+        margin: 15px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      .alert {
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        font-size: 1.05em;
+        line-height: 1.6;
+      }
+      .alert-success {
+        background: #d4edda;
+        border-left: 6px solid #28a745;
+        color: #155724;
+      }
+      .alert-info {
+        background: #d1ecf1;
+        border-left: 6px solid #17a2b8;
+        color: #0c5460;
+      }
+      .alert-warning {
+        background: #fff3cd;
+        border-left: 6px solid #ffc107;
+        color: #856404;
+      }
+      .alert-danger {
+        background: #f8d7da;
+        border-left: 6px solid #dc3545;
+        color: #721c24;
+      }
+      .highlight {
+        background: linear-gradient(120deg, #fff3cd 0%, #ffeaa7 100%);
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-weight: 700;
+        color: #856404;
+        border: 1px solid #ffc107;
+      }
+      .timeline {
+        position: relative;
+        padding: 25px 0;
+      }
+      .timeline-item {
+        padding: 25px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 12px;
+        margin: 20px 0;
+        border-left: 6px solid #667eea;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+      .timeline-item h4 {
+        color: #667eea;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+      }
+      .timeline-item p {
+        margin: 8px 0;
+        line-height: 1.6;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        background: white;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      th,
+      td {
+        padding: 18px;
+        text-align: left;
+        border-bottom: 2px solid #dee2e6;
+      }
+      th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-weight: 700;
+        color: white;
+        font-size: 1.05em;
+      }
+      tr:hover {
+        background: #f8f9fa;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      ul li {
+        padding: 12px 15px;
+        margin: 10px 0;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #667eea;
+        line-height: 1.6;
+      }
+      ul li strong {
+        color: #667eea;
+      }
+      .quick-reference {
+        background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+        border: 3px solid #ffc107;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 25px 0;
+        box-shadow: 0 4px 10px rgba(255, 193, 7, 0.2);
+      }
+      .quick-reference h4 {
+        color: #856404;
+        margin-bottom: 18px;
+        font-size: 1.4em;
+      }
+      .quick-reference-item {
+        margin: 12px 0;
+        padding: 8px 0;
+        font-size: 1.05em;
+        line-height: 1.7;
+      }
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2em;
+        }
+        .nav-tab {
+          padding: 14px 18px;
+          font-size: 0.95em;
+        }
+        .content {
+          padding: 20px;
+        }
+        .section-title {
+          font-size: 1.5em;
+        }
+        .pricing-grid,
+        .stats-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .feature-list {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 15px 0;
+      }
+      .feature-list li {
+        background: transparent;
+        border-left: none;
+        padding: 10px 0;
+        border-bottom: 1px solid #e9ecef;
+      }
+      .feature-list li:last-child {
+        border-bottom: none;
+      }
+      .badge {
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: 600;
+        margin: 5px;
+      }
+      .badge-success {
+        background: #28a745;
+        color: white;
+      }
+      .badge-primary {
+        background: #667eea;
+        color: white;
+      }
+      .two-column {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin: 25px 0;
+      }
+      .info-box {
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        border: 2px solid #dee2e6;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      }
+      .info-box h4 {
+        color: #667eea;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+      }
+      .commission-example {
+        background: #e8f5e9;
+        border-left: 6px solid #28a745;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 8px;
+      }
+      .commission-example h4 {
+        color: #28a745;
+        margin-bottom: 12px;
+      }
+      .note {
+        background: #e3f2fd;
+        border-left: 6px solid #2196f3;
+        padding: 15px 20px;
+        margin: 15px 0;
+        border-radius: 8px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🎯 Cold Calling Assistant Complete Training Guide</h1>
+        <p>Everything You Need to Successfully Make Sales Calls</p>
+        <p style="font-size: 0.95em; opacity: 0.9; margin-top: 10px">
+          Naveen's Web Development Business | Your Path to $150-250/Week
+        </p>
+      </header>
+      <div class="nav-tabs">
+        <button class="nav-tab active" onclick="showTab('overview')">
+          🏠 Overview
+        </button>
+        <button class="nav-tab" onclick="showTab('daily-tasks')">
+          📋 Daily Tasks
+        </button>
+        <button class="nav-tab" onclick="showTab('call-script')">
+          📞 Call Script
+        </button>
+        <button class="nav-tab" onclick="showTab('objections')">
+          💬 Objections
+        </button>
+        <button class="nav-tab" onclick="showTab('pricing')">💰 Pricing</button>
+        <button class="nav-tab" onclick="showTab('recordings')">
+          🎙️ Recordings
+        </button>
+        <button class="nav-tab" onclick="showTab('training')">
+          🎓 Training
+        </button>
+        <button class="nav-tab" onclick="showTab('commission')">
+          💵 Commission
+        </button>
+        <button class="nav-tab" onclick="showTab('tips')">💡 Pro Tips</button>
+      </div>
+      <div class="content">
+        <!-- OVERVIEW TAB -->
+        <div id="overview" class="tab-content active">
+          <h2 class="section-title">👋 Welcome to Your New Role!</h2>
+
+          <div class="alert alert-success">
+            <strong>🎉 Congratulations on joining the team!</strong><br />
+            This guide contains everything you need to succeed as a cold calling
+            assistant for Naveen's web development business. Read through each
+            section carefully.
+          </div>
+          <h3 class="section-title">📊 Your Role at a Glance</h3>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div>Your Daily Goal</div>
+              <div class="stat-number">2</div>
+              <div>Business Calls</div>
+            </div>
+            <div class="stat-card">
+              <div>Per Success</div>
+              <div class="stat-number">$50</div>
+              <div>Commission Earned</div>
+            </div>
+            <div class="stat-card">
+              <div>Weekly Target</div>
+              <div class="stat-number">3-5</div>
+              <div>Email Collections</div>
+            </div>
+            <div class="stat-card">
+              <div>Weekly Income</div>
+              <div class="stat-number">$150-250</div>
+              <div>Potential Earnings</div>
+            </div>
+          </div>
+          <h3 class="section-title">🎯 What You'll Be Doing</h3>
+          <div class="two-column">
+            <div class="info-box">
+              <h4>📞 Your Main Task</h4>
+              <p>
+                <strong>Simple Goal:</strong> Call small business owners and
+                collect their email addresses so Naveen can send them website
+                design samples.
+              </p>
+              <p style="margin-top: 15px">
+                <strong>That's it!</strong> You're not selling, just collecting
+                contact information for interested business owners.
+              </p>
+            </div>
+            <div class="info-box">
+              <h4>💰 How You Get Paid</h4>
+              <p><strong>$50 per email collected</strong></p>
+              <p style="margin-top: 10px">
+                Every time a business owner gives you their email and expresses
+                interest in receiving website samples, you earn $50.
+              </p>
+              <p style="margin-top: 10px">
+                <strong>Payment:</strong> Every Friday via Wise
+              </p>
+            </div>
+          </div>
+          <h3 class="section-title">📅 Typical Day Overview</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h4>Morning (9-10 AM)</h4>
+              <p>✅ Check messages from Naveen</p>
+              <p>✅ Receive 2 business names and phone numbers</p>
+              <p>✅ Quick script review (2 minutes)</p>
+            </div>
+            <div class="timeline-item">
+              <h4>Midday (12-3 PM) - Best Calling Time</h4>
+              <p>📞 Make Call #1 using the script</p>
+              <p>🎙️ Record the call (required)</p>
+              <p>📝 Report result to Naveen immediately</p>
+              <p>📞 Make Call #2 using the script</p>
+              <p>🎙️ Record the call (required)</p>
+              <p>📝 Report result to Naveen immediately</p>
+            </div>
+            <div class="timeline-item">
+              <h4>End of Day (Before 6 PM)</h4>
+              <p>✅ Confirm both calls completed</p>
+              <p>✅ Send any follow-up notes</p>
+              <p>✅ Ready for next day</p>
+            </div>
+          </div>
+          <h3 class="section-title">✅ Requirements for Success</h3>
+          <ul>
+            <li>
+              <strong>Clear American English accent</strong> - You're
+              representing a professional business
+            </li>
+            <li>
+              <strong>Reliable phone</strong> - With call recording capability
+            </li>
+            <li>
+              <strong>Quiet calling location</strong> - No background noise
+            </li>
+            <li>
+              <strong>Consistent availability</strong> - Monday-Friday, 2 hours
+              per day
+            </li>
+            <li>
+              <strong>Quick response time</strong> - Reply to Naveen within 30
+              minutes during work hours
+            </li>
+            <li>
+              <strong>Professional attitude</strong> - Polite, confident,
+              persistent
+            </li>
+            <li>
+              <strong>Recording app</strong> - To record every call for training
+            </li>
+          </ul>
+          <h3 class="section-title">🚀 Getting Started Checklist</h3>
+          <div class="alert alert-info">
+            <strong>Before Your First Call:</strong><br /><br />
+            ☐ Read the entire Call Script section<br />
+            ☐ Read all Objection Handling responses<br />
+            ☐ Download and test call recording app<br />
+            ☐ Practice script 5 times out loud<br />
+            ☐ Practice with AI (see Training section)<br />
+            ☐ Confirm your payment method with Naveen<br />
+            ☐ Set up quiet calling space<br />
+            ☐ Ready to make your first call! 🎉
+          </div>
+          <div class="alert alert-warning">
+            <strong>⚠️ Important Rules:</strong><br /><br />
+            • <strong>ALWAYS record every call</strong> - This is mandatory for
+            training and commission verification<br />
+            • <strong>Report results immediately</strong> - Don't wait until end
+            of day<br />
+            • <strong>Use the script</strong> - Don't improvise until you've
+            done 20+ successful calls<br />
+            • <strong>Stay professional</strong> - Even with rude people, stay
+            calm and polite<br />
+            • <strong>Never lie</strong> - Be honest about the service and
+            pricing
+          </div>
+        </div>
+        <!-- DAILY TASKS TAB -->
+        <div id="daily-tasks" class="tab-content">
+          <h2 class="section-title">📋 Your Daily Workflow</h2>
+
+          <div class="alert alert-info">
+            <strong>💡 Daily Success Formula:</strong> 2 calls made + good
+            attitude + use script = $100-150 per week earned!
+          </div>
+          <h3 class="section-title">✅ Daily Checklist</h3>
+          <div class="script-box">
+            <h3>Every Weekday (Monday-Friday):</h3>
+            <ul style="font-size: 1.1em">
+              <li>
+                ☐ <strong>Morning:</strong> Check messages from Naveen for
+                today's call list
+              </li>
+              <li>
+                ☐ <strong>Before calls:</strong> Review script and objection
+                responses (2 min)
+              </li>
+              <li>☐ <strong>Call #1:</strong> Open recording app</li>
+              <li>☐ <strong>Call #1:</strong> Start recording</li>
+              <li>☐ <strong>Call #1:</strong> Make the call using script</li>
+              <li>☐ <strong>Call #1:</strong> Stop recording and save file</li>
+              <li>
+                ☐ <strong>Call #1:</strong> Report result to Naveen immediately
+              </li>
+              <li>☐ <strong>Call #2:</strong> Open recording app</li>
+              <li>☐ <strong>Call #2:</strong> Start recording</li>
+              <li>☐ <strong>Call #2:</strong> Make the call using script</li>
+              <li>☐ <strong>Call #2:</strong> Stop recording and save file</li>
+              <li>
+                ☐ <strong>Call #2:</strong> Report result to Naveen immediately
+              </li>
+              <li>
+                ☐ <strong>End of day:</strong> Send both recordings to Naveen
+              </li>
+              <li>
+                ☐ <strong>End of day:</strong> Confirm availability for tomorrow
+              </li>
+            </ul>
+          </div>
+          <h3 class="section-title">📊 How to Report Results</h3>
+
+          <div class="script-box">
+            <h3>✅ SUCCESS - Email Collected (This is what we want!)</h3>
+            <div class="script-text">
+              <strong>Message to send Naveen:</strong><br /><br />
+              Call #1 - ABC Electrical Services:<br />
+              Status: <span class="highlight">✅ SUCCESS - Email Collected</span
+              ><br />
+              Owner Name: John Smith<br />
+              Email: john@abcelectrical.com<br />
+              Notes: Very interested, wants to see samples. Said he's been
+              thinking about getting a website. Available for follow-up
+              anytime.<br /><br />
+              Recording: [Attach or send file named "ABC-Electrical-Dec13.mp3"]
+            </div>
+          </div>
+          <div class="script-box">
+            <h3>📞 Callback Scheduled</h3>
+            <div class="script-text">
+              <strong>Message to send Naveen:</strong><br /><br />
+              Call #1 - XYZ Plumbing:<br />
+              Status: <span class="highlight">📞 Callback Scheduled</span><br />
+              Owner Name: Mike Johnson<br />
+              Callback Date/Time: Friday, Dec 15 at 2 PM<br />
+              Reason: Owner was with customer, asked me to call back Friday
+              afternoon<br />
+              Notes: Seemed interested but genuinely busy<br /><br />
+              Recording: [Attach or send file]
+            </div>
+          </div>
+          <div class="script-box">
+            <h3>❌ Not Interested</h3>
+            <div class="script-text">
+              <strong>Message to send Naveen:</strong><br /><br />
+              Call #1 - Smith HVAC:<br />
+              Status: <span class="highlight">❌ Not Interested</span><br />
+              Reason: Already has a website with another company, happy with
+              current setup<br />
+              Notes: Owner was polite but firm, not a good prospect<br /><br />
+              Recording: [Attach or send file]
+            </div>
+          </div>
+          <div class="script-box">
+            <h3>📧 Voicemail Left</h3>
+            <div class="script-text">
+              <strong>Message to send Naveen:</strong><br /><br />
+              Call #1 - Johnson Landscaping:<br />
+              Status: <span class="highlight">📧 Voicemail Left</span><br />
+              Message Left: "Hi, this is [Your Name] calling about professional
+              website services for small businesses. We help businesses like
+              yours get online affordably. Please call me back at [number] or
+              I'll try you again tomorrow."<br /><br />
+              Recording: [Attach or send file]
+            </div>
+          </div>
+          <div class="script-box">
+            <h3>🚫 Wrong Number / Business Closed</h3>
+            <div class="script-text">
+              <strong>Message to send Naveen:</strong><br /><br />
+              Call #1 - Green Cleaning Services:<br />
+              Status: <span class="highlight">🚫 Wrong Number</span><br />
+              Notes: Number is disconnected / Person answered said wrong number
+              / Business appears to be closed<br /><br />
+              Recording: [Attach or send file if applicable]
+            </div>
+          </div>
+          <h3 class="section-title">⏰ Best Times to Call</h3>
+          <table>
+            <tr>
+              <th>Time</th>
+              <th>Success Rate</th>
+              <th>Why</th>
+            </tr>
+            <tr>
+              <td><strong>12:00 PM - 2:00 PM</strong></td>
+              <td><span class="badge badge-success">BEST</span></td>
+              <td>Lunch time, owners often answer phone, less busy</td>
+            </tr>
+            <tr>
+              <td><strong>2:00 PM - 4:00 PM</strong></td>
+              <td><span class="badge badge-success">GOOD</span></td>
+              <td>Afternoon lull, owners more available</td>
+            </tr>
+            <tr>
+              <td><strong>10:00 AM - 12:00 PM</strong></td>
+              <td><span class="badge badge-primary">OK</span></td>
+              <td>Morning routine, some owners available</td>
+            </tr>
+            <tr>
+              <td>8:00 AM - 10:00 AM</td>
+              <td>Fair</td>
+              <td>Often busy starting day, but some owners available</td>
+            </tr>
+            <tr>
+              <td>After 5:00 PM</td>
+              <td>Poor</td>
+              <td>Most small businesses closed or going home</td>
+            </tr>
+          </table>
+          <div class="alert alert-warning">
+            <strong>⚠️ Important Recording Reminders:</strong><br /><br />
+            • Start recording BEFORE you dial the number<br />
+            • Make sure recording app is working properly<br />
+            • Save recordings with clear names (BusinessName-Date)<br />
+            • Send recordings to Naveen same day<br />
+            • Keep recordings until Naveen confirms receipt<br />
+            • Without recording, commission payment may be delayed
+          </div>
+        </div>
+        <!-- CALL SCRIPT TAB -->
+        <div id="call-script" class="tab-content">
+          <h2 class="section-title">📞 Your Complete Call Script</h2>
+
+          <div class="alert alert-danger">
+            <strong
+              >🔥 CRITICAL: This script has a proven success rate of
+              25-40%</strong
+            ><br />
+            Use this EXACT script for your first 20 calls. DO NOT improvise or
+            change wording until you've mastered this version. Every word is
+            chosen for maximum conversion.
+          </div>
+          <div class="alert alert-info">
+            <strong>📊 Script Performance:</strong><br />
+            • Average call duration: 2-3 minutes<br />
+            • Success rate: 25-40% (1 in 3-4 calls gets email)<br />
+            • Most common result: Email collected or callback scheduled<br />
+            • Practice this 10 times before your first real call!
+          </div>
+          <h3 class="section-title">🎯 The Complete Primary Script</h3>
+          <div class="script-box">
+            <h3>1️⃣ Opening (5 seconds)</h3>
+            <div class="script-text">
+              "Hi, is this the owner of
+              <span class="highlight">[Business Name]</span>?"
+            </div>
+            <div class="note">
+              <strong>If YES:</strong> Continue to step 2<br />
+              <strong>If NO:</strong> "Could I speak with the owner about your
+              business website?"<br />
+              <strong>If they ask "Who's calling?":</strong> Go straight to step
+              2 (Introduction)
+            </div>
+          </div>
+          <div class="script-box">
+            <h3>2️⃣ Introduction (10 seconds)</h3>
+            <div class="script-text">
+              "Great! I'll keep this very brief. My name is
+              <span class="highlight">[Your Name]</span>, calling from a
+              freelance web development team. We help small businesses get
+              online and attract more customers through professional websites."
+            </div>
+            <div class="note">
+              <strong>Why this works:</strong> You promise to be brief (respects
+              their time), introduce yourself professionally, and immediately
+              state what you do in terms of THEIR benefit (attract customers).
+            </div>
+          </div>
+          <div class="script-box">
+            <h3>3️⃣ Problem Identification (10 seconds)</h3>
+            <div class="script-text">
+              "We noticed your business doesn't have a website yet, and we
+              wanted to reach out because most customers today search online
+              before choosing a service provider."
+            </div>
+            <div class="note">
+              <strong>Why this works:</strong> Creates mild urgency by pointing
+              out they're missing online customers. Not pushy, just factual.
+            </div>
+          </div>
+          <div class="script-box">
+            <h3>4️⃣ The Offer (15 seconds)</h3>
+            <div class="script-text">
+              "We build modern, mobile-friendly websites for small businesses
+              for just <span class="highlight">$299 one-time</span>. No monthly
+              fees, no subscriptions. It includes your business info, services,
+              photos, location, contact form, and everything needed to look
+              professional online."
+            </div>
+            <div class="note">
+              <strong>Why this works:</strong> Price sounds affordable,
+              "one-time" removes subscription fear, you list tangible benefits
+              quickly.
+            </div>
+          </div>
+          <div class="script-box">
+            <h3>5️⃣ Qualifying Question (Builds Engagement)</h3>
+            <div class="script-text">
+              "Just curious - do you currently get most customers through
+              Facebook, Google, or mostly referrals and walk-ins?"
+            </div>
+            <div class="alert alert-success">
+              <strong>🎯 This is KEY!</strong> This question:<br />
+              • Gets them talking (builds rapport)<br />
+              • Shows you care about their business<br />
+              • Helps you understand their situation<br />
+              • Sets up your value pitch<br />
+              • Makes it feel like a conversation, not a sales pitch
+            </div>
+            <div class="script-text" style="margin-top: 15px">
+              <strong
+                >After they answer (whatever they say), respond with:</strong
+              ><br /><br />
+              "That's great! A website will actually multiply those leads
+              because when people search your business name or service in your
+              area, you'll show up professionally on Google."
+            </div>
+            <div class="note">
+              <strong>Pro Tip:</strong> Listen to their answer! If they mention
+              struggling to get customers, emphasize how a website helps. If
+              they're doing well, emphasize how it will multiply their success.
+            </div>
+          </div>
+          <div class="script-box">
+            <h3>6️⃣ Call to Action - THE CLOSE (Most Important Part!)</h3>
+            <div class="script-text" style="border: 3px solid #28a745">
+              "If you'd like, I can have our lead developer send you sample
+              designs and details so you can see exactly what you'd get.<br /><br />
+              <span class="highlight"
+                >What's the best email address to send that to?</span
+              >"
+            </div>
+            <div class="alert alert-danger">
+              <strong>⚠️ CRITICAL: THEN STOP TALKING!</strong><br /><br />
+              After asking for the email, STOP. Do not say another word. This
+              silence creates pressure. Let THEM fill the silence. This is the
+              most important moment of the call. The first person who speaks
+              usually loses. Wait for them to give you the email or object.
+            </div>
+            <div class="note">
+              <strong>Why "sample designs" works:</strong><br />
+              • Low pressure (just looking at samples)<br />
+              • They can "see exactly what they'd get" (removes risk)<br />
+              • No commitment required<br />
+              • Email ask feels natural and logical
+            </div>
+          </div>
+          <div class="script-box">
+            <h3>7️⃣ Confirmation & Close</h3>
+            <div class="script-text">
+              "Perfect, thank you!
+              <span class="highlight"
+                >[Repeat email back slowly to confirm spelling - VERY
+                IMPORTANT]</span
+              ><br /><br />
+              Our lead developer Naveen will send everything over today, and you
+              can review it whenever you have time.<br /><br />
+              Thanks for your time, have a great day!"
+            </div>
+            <div
+              class="alert alert-success"
+              style="font-size: 1.2em; text-align: center"
+            >
+              <strong>🎉 CONGRATULATIONS!</strong><br />
+              <strong>EMAIL COLLECTED = $50 COMMISSION EARNED!</strong>
+            </div>
+            <div class="note">
+              <strong>Important:</strong> Always repeat the email back to
+              confirm spelling. Write it down carefully. A wrong email = lost
+              commission.
+            </div>
+          </div>
+          <h3 class="section-title">⚡ Ultra-Short Alternative Script</h3>
+          <div class="alert alert-info">
+            <strong>When to use this version:</strong><br />
+            • Owner explicitly says "I'm very busy, make it quick"<br />
+            • You sense impatience in their tone<br />
+            • They interrupt you during regular script<br /><br />
+            This version takes only 30 seconds total.
+          </div>
+          <div class="script-box">
+            <h3>Speed Script (30 seconds)</h3>
+            <div class="script-text">
+              "Hi, is this the owner?<br /><br />
+              Great! Very quick call - I'm
+              <span class="highlight">[Your Name]</span> from a web development
+              team.<br /><br />
+              We noticed your business doesn't have a website, so we're offering
+              professional websites for small businesses at just
+              <span class="highlight">$299 one-time</span>.<br /><br />
+              If you're interested, I can send sample designs to your email so
+              you can see what you'd get. What's the best email for you?"
+            </div>
+            <div class="note">
+              Then STOP and wait for their response. Same rules apply - silence
+              is powerful.
+            </div>
+          </div>
+          <h3 class="section-title">
+            🎭 Script Variations for Different Situations
+          </h3>
+          <div class="two-column">
+            <div class="info-box">
+              <h4>If they answer: "What's this about?"</h4>
+              <div class="script-text" style="margin-top: 10px">
+                "I'm calling about professional website services for small
+                businesses. Are you the owner? Great! We help businesses like
+                yours get online affordably..."
+              </div>
+              <p style="margin-top: 10px; font-style: italic">
+                Then continue with regular script from step 2
+              </p>
+            </div>
+            <div class="info-box">
+              <h4>If they say: "I'm busy right now"</h4>
+              <div class="script-text" style="margin-top: 10px">
+                "I totally understand. What's the best email to send the
+                information to? You can review it whenever you have 5 minutes."
+              </div>
+              <p style="margin-top: 10px; font-style: italic">
+                Jump straight to email collection - don't apologize or offer
+                callback
+              </p>
+            </div>
+            <div class="info-box">
+              <h4>If receptionist asks: "What's this regarding?"</h4>
+              <div class="script-text" style="margin-top: 10px">
+                "It's regarding their business website and online presence. Is
+                the owner available?"
+              </div>
+              <p style="margin-top: 10px; font-style: italic">
+                Keep it brief and professional. Don't give full pitch to
+                receptionist.
+              </p>
+            </div>
+            <div class="info-box">
+              <h4>If they interrupt with: "How much?"</h4>
+              <div class="script-text" style="margin-top: 10px">
+                "Just $299 one-time for a complete professional website - no
+                monthly fees. I can send you samples to see exactly what you
+                get. What's your email?"
+              </div>
+              <p style="margin-top: 10px; font-style: italic">
+                Answer directly, then immediately redirect to email ask
+              </p>
+            </div>
+          </div>
+          <h3 class="section-title">📝 Script Practice Tips</h3>
+          <div class="script-box">
+            <ul class="feature-list">
+              <li>
+                <strong>Read it out loud 20 times</strong> before your first
+                call - You need to sound natural, not like reading
+              </li>
+              <li>
+                <strong>Record yourself practicing</strong> and listen back -
+                Notice where you sound uncertain or rushed
+              </li>
+              <li>
+                <strong>Practice with the AI</strong> (see Training section) -
+                Simulates real objections and conversations
+              </li>
+              <li>
+                <strong>Time yourself</strong> - Entire script should take 60-90
+                seconds if they don't interrupt
+              </li>
+              <li>
+                <strong>Focus on tone</strong> - Friendly, confident, helpful
+                (not pushy or desperate)
+              </li>
+              <li>
+                <strong>Smile while talking</strong> - People can hear it in
+                your voice over the phone!
+              </li>
+              <li>
+                <strong>Pace yourself</strong> - Don't rush. Speak clearly.
+                Pause between sections.
+              </li>
+              <li>
+                <strong>Emphasize key phrases</strong> - "$299 one-time", "no
+                monthly fees", "sample designs"
+              </li>
+            </ul>
+          </div>
+          <div class="alert alert-warning">
+            <strong>🚫 Common Mistakes to Avoid:</strong><br /><br />
+            ❌ Talking too fast (slow down!)<br />
+            ❌ Sounding robotic or rehearsed<br />
+            ❌ Apologizing ("Sorry to bother you") - Never apologize!<br />
+            ❌ Asking "Is this a good time?" - Gives them easy out<br />
+            ❌ Adding extra words or explanations - stick to script<br />
+            ❌ Forgetting to pause after asking for email<br />
+            ❌ Not confirming email spelling - leads to lost commissions!<br />
+            ❌ Sounding desperate or pushy<br />
+            ❌ Giving up too easily on first objection
+          </div>
+        </div>
+        <!-- OBJECTIONS TAB -->
+        <div id="objections" class="tab-content">
+          <h2 class="section-title">💬 Objection Handling Master Guide</h2>
+
+          <div class="alert alert-success">
+            <strong>💡 Golden Rule of Objection Handling:</strong><br />
+            Every objection is just a question in disguise. Answer their concern
+            calmly, add value, then redirect back to collecting the email. NEVER
+            argue. ALWAYS stay friendly.
+          </div>
+          <div class="quick-reference">
+            <h4>🚀 Quick Reference Card - Memorize These Responses!</h4>
+            <div class="quick-reference-item">
+              <strong>"I don't need a website"</strong> → Competitors are
+              online, you're losing customers to them
+            </div>
+            <div class="quick-reference-item">
+              <strong>"I don't have money"</strong> → Just $299 one-time, no
+              payment today, just send samples
+            </div>
+            <div class="quick-reference-item">
+              <strong>"I have Facebook/Instagram"</strong> → Website brings
+              everything together, Google ranks websites higher
+            </div>
+            <div class="quick-reference-item">
+              <strong>"I'm too busy"</strong> → Just need your email, review
+              samples whenever you have 5 minutes
+            </div>
+            <div class="quick-reference-item">
+              <strong>"Why so cheap? Scam?"</strong> → Small freelance team, no
+              overhead, see samples first before any payment
+            </div>
+            <div class="quick-reference-item">
+              <strong>"Need to think about it"</strong> → Perfect! That's why
+              I'm sending samples - review and think about it properly
+            </div>
+            <div class="quick-reference-item">
+              <strong>"Call me back later"</strong> → Sure! Can I send samples
+              now so you can review before we talk again?
+            </div>
+            <div class="quick-reference-item">
+              <strong>"Already have someone for marketing"</strong> → Great!
+              Website will make their work even more effective
+            </div>
+            <div class="quick-reference-item">
+              <strong>"What's included?"</strong> → Mobile design, business
+              info, contact form, Google Maps, everything - details in email
+            </div>
+          </div>
+          <h3 class="section-title">📚 Complete Objection Scripts</h3>
+          <div class="objection-card">
+            <div class="objection-title">❌ "I don't need a website"</div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "I totally understand - many business owners feel the same way at
+              first.<br /><br />
+              But here's what we're seeing: when potential customers search for
+              your service in your area and find nothing about your business,
+              they choose the competitor who shows up.<br /><br />
+              A website isn't just about looking professional - it's about not
+              losing customers to competitors who do show up online.<br /><br />
+              No pressure though - I can just send you the samples so you can
+              see what other businesses in your industry are doing. What's your
+              email?"
+            </div>
+            <div class="note">
+              <strong>Why it works:</strong> Acknowledge their feeling, create
+              fear of loss (FOMO), focus on competition, stay low-pressure,
+              redirect to email.
+            </div>
+          </div>
+          <div class="objection-card">
+            <div class="objection-title">
+              ❌ "I don't have money right now" or "Too expensive"
+            </div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "I completely understand - that's actually why we created this
+              service. Traditional agencies charge $2,000-$5,000 for
+              websites.<br /><br />
+              We're offering professional work at small business pricing because
+              we're a small freelance team with no overhead.<br /><br />
+              And you don't pay anything today - I'm just sending information.
+              You decide later when it makes sense for your budget.<br /><br />
+              What email should I send the samples to?"
+            </div>
+            <div class="note">
+              <strong>Why it works:</strong> Shows understanding, highlights
+              value (vs expensive agencies), removes payment pressure, refocuses
+              on just getting email.
+            </div>
+          </div>
+          <div class="objection-card">
+            <div class="objection-title">
+              ❌ "We already have Facebook / Instagram"
+            </div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "That's great! Facebook and Instagram are excellent tools.<br /><br />
+              What we're finding though is that most customers still search on
+              Google before visiting a business. If they search your business
+              name and only see Facebook, they often can't find your hours,
+              services, or contact info easily.<br /><br />
+              A website brings everything together - your Facebook, Instagram,
+              contact info, services, everything in one professional place that
+              Google ranks.<br /><br />
+              I can send examples of how this looks. What's your email?"
+            </div>
+            <div class="note">
+              <strong>Why it works:</strong> Validates their current efforts,
+              positions website as complement not replacement, focuses on
+              practical benefit (Google search), makes email ask natural.
+            </div>
+          </div>
+          <div class="objection-card">
+            <div class="objection-title">❌ "I'm too busy right now"</div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "I totally understand - I'll keep this super quick then.<br /><br />
+              What's the best email to send the samples to? You can review them
+              whenever you have 5 minutes, and there's no pressure to decide
+              today."
+            </div>
+            <div class="note">
+              <strong>Why it works:</strong> Respects their time, makes it
+              extremely easy (just email), removes all pressure, quick close.
+              This is one of the easiest objections to handle!
+            </div>
+          </div>
+          <div class="objection-card">
+            <div class="objection-title">
+              ❌ "Why is it so cheap? Is this a scam?"
+            </div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "Great question - I'd be skeptical too if I got this call!<br /><br />
+              We're not a big agency with fancy offices and overhead. We're a
+              small freelance team that specializes in helping small businesses.
+              We keep costs low by working remotely and focusing on quality over
+              marketing.<br /><br />
+              That's why we send samples first - so you can see the actual
+              quality before making any decisions. No payment, no commitment
+              today.<br /><br />
+              What email can I send the examples to?"
+            </div>
+            <div class="note">
+              <strong>Why it works:</strong> Validates their concern (builds
+              trust), explains economics transparently, offers proof (samples),
+              removes all risk, asks for email.
+            </div>
+          </div>
+          <div class="objection-card">
+            <div class="objection-title">❌ "I need to think about it"</div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "Absolutely - this is an important decision for your business.<br /><br />
+              That's exactly why I'm just sending information first. You can
+              review the samples, see what you'd actually get, check the
+              quality, and think about it properly.<br /><br />
+              What email should I send it to so you have everything to review?"
+            </div>
+            <div class="note">
+              <strong>Why it works:</strong> Agrees with them completely,
+              removes pressure, makes email seem logical for their
+              decision-making process.
+            </div>
+          </div>
+          <div class="objection-card">
+            <div class="objection-title">❌ "Call me back next week/month"</div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "Absolutely, I'll schedule that callback for
+              <span class="highlight">[specific day they mentioned]</span
+              >.<br /><br />
+              Before I go though - can I send the samples to your email now so
+              you have something to look at before we talk again? That way our
+              next call can be more specific to what you like.<br /><br />
+              What's your email?"
+            </div>
+            <div class="note">
+              <strong>Why it works:</strong> Respects their timeline, creates
+              reason for email NOW, makes next call more productive, still
+              achieves goal of email collection.
+            </div>
+          </div>
+          <div class="objection-card">
+            <div class="objection-title">
+              ❌ "Just tell me everything now on the phone"
+            </div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "I'd love to! The main thing is we build mobile-friendly,
+              professional websites for $299 one-time.<br /><br />
+              But honestly, our lead developer can explain the technical details
+              and options much better than I can, and he sends visual examples
+              so you can actually see what you'd get.<br /><br />
+              It's much easier to understand with the samples. What email should
+              he send them to?"
+            </div>
+            <div class="note">
+              <strong>Why it works:</strong> Provides some info (respects
+              request), positions Naveen as expert, shows value of visual
+              samples, returns to goal.
+            </div>
+          </div>
+          <div class="objection-card">
+            <div class="objection-title">
+              ❌ "How long does it take to build?"
+            </div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "Great question - typically 2-5 business days depending on how
+              much content you have ready.<br /><br />
+              Our developer will give you the exact timeline based on your
+              specific needs when he sends the samples and details.<br /><br />
+              What email should I send that to?"
+            </div>
+            <div class="note">
+              <strong>Why it works:</strong> Gives helpful answer, defers
+              specifics to Naveen, redirects to email collection.
+            </div>
+          </div>
+          <div class="objection-card">
+            <div class="objection-title">❌ "What exactly is included?"</div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "Good question! The $299 website includes:<br /><br />
+              • Professional mobile-friendly design<br />
+              • Your business info, services, and photos<br />
+              • Contact form so customers can reach you<br />
+              • Google Maps integration<br />
+              • Your location and hours<br />
+              • Everything needed to look professional online<br /><br />
+              The full detailed list is in the email our developer sends, along
+              with sample websites so you can see exactly what you get.<br /><br />
+              What email should I use?"
+            </div>
+            <div class="note">
+              <strong>Why it works:</strong> Provides real value list, sounds
+              comprehensive, references detailed email for more info, natural
+              transition to email ask.
+            </div>
+          </div>
+          <div class="objection-card">
+            <div class="objection-title">
+              ❌ "How much does hosting/domain cost?"
+            </div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "Great question. The website itself is $299 one-time.<br /><br />
+              Hosting and domain are handled separately by our lead developer,
+              and he provides very affordable annual options - much cheaper than
+              doing it yourself.<br /><br />
+              He'll include all those details when he sends the samples. What
+              email should he send it to?"
+            </div>
+            <div class="note">
+              <strong>Why it works:</strong> Answers without getting technical,
+              defers pricing details to Naveen, doesn't scare with numbers,
+              keeps focus on email.
+            </div>
+          </div>
+          <div class="objection-card">
+            <div class="objection-title">
+              ❌ "I already have someone doing my marketing"
+            </div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "Perfect! They'll actually love that you're adding a website
+              because it makes everything they do more effective.<br /><br />
+              Most marketing people we work with say websites are the foundation
+              - social media, ads, everything works better when you have a
+              professional website to send people to.<br /><br />
+              I can send the samples for them to review too. What email works
+              best?"
+            </div>
+            <div class="note">
+              <strong>Why it works:</strong> Positions website as helping their
+              current person, shows it enhances their efforts, removes
+              competition fear.
+            </div>
+          </div>
+          <div class="objection-card">
+            <div class="objection-title">
+              ❌ "Send me something in the mail" or "I don't use email"
+            </div>
+            <div class="objection-response">✅ Your Response:</div>
+            <div class="script-text">
+              "I understand. The samples are visual website designs, so email is
+              the best way to see them clearly on your computer or phone.<br /><br />
+              Do you have a family member or employee with an email address I
+              could send them to? You can review them together."
+            </div>
+            <div class="note">
+              <strong>Alternative if they absolutely refuse email:</strong> "I
+              understand. Can I take your phone number and have our developer
+              call you directly to discuss?" (Report this to Naveen as "No Email
+              Available")
+            </div>
+          </div>
+          <h3 class="section-title">
+            🎯 General Objection Handling Principles
+          </h3>
+          <div class="script-box">
+            <ul class="feature-list">
+              <li>
+                <strong>Never argue or get defensive</strong> - If they say "I
+                don't need it," don't say "Yes you do!" Stay calm and respectful
+              </li>
+              <li>
+                <strong>Acknowledge their concern first</strong> - "I
+                understand," "That makes sense," "Great question" - validates
+                them
+              </li>
+              <li>
+                <strong>Answer briefly</strong> - Don't give long explanations.
+                Answer in 2-3 sentences max, then redirect to email
+              </li>
+              <li>
+                <strong>Always redirect to email</strong> - Every objection
+                response should end with asking for their email
+              </li>
+              <li>
+                <strong>Stay friendly</strong> - Even if they're rude, you stay
+                professional and kind
+              </li>
+              <li>
+                <strong>Use "feel, felt, found" technique</strong> - "I
+                understand how you feel. Other owners felt the same way. What
+                they found was..."
+              </li>
+              <li>
+                <strong>Focus on low pressure</strong> - Emphasize "just
+                samples," "no commitment," "review when ready"
+              </li>
+              <li>
+                <strong>Create mild urgency</strong> - "Competitors are online,"
+                "customers are searching now"
+              </li>
+              <li>
+                <strong>Know when to let go</strong> - If they say no 3 times
+                firmly, thank them and move on professionally
+              </li>
+            </ul>
+          </div>
+          <h3 class="section-title">🚫 When to Accept "No"</h3>
+          <div class="alert alert-warning">
+            <strong
+              >Sometimes "no" really means no. Here's when to gracefully
+              exit:</strong
+            ><br /><br />
+            • They explicitly say "Take me off your list" or "Don't call
+            again"<br />
+            • They become angry or aggressive (stay calm, apologize for
+            bothering, hang up)<br />
+            • After handling 2-3 objections and they're still firm "no"<br />
+            • They already have a recent website (you can verify by asking)<br />
+            • They're going out of business or just closed<br /><br />
+            <strong>Exit Script:</strong> "I completely understand. Thanks for
+            your time, and best of luck with your business!"<br /><br />
+            Then report to Naveen as "Not Interested - [reason]"
+          </div>
+          <div class="alert alert-success">
+            <strong>🏆 Pro Tip - The "Columbo Close":</strong><br /><br />
+            If they say no and you're about to hang up, try this ONE more
+            time:<br /><br />
+            "I understand - before I let you go, can I just ask - what would
+            need to change for you to be interested in having a website?"<br /><br />
+            Listen to their answer. Often they'll reveal the real objection
+            (price, timing, features) which you can then address!
+          </div>
+        </div>
+        <!-- PRICING TAB -->
+        <div id="pricing" class="tab-content">
+          <h2 class="section-title">💰 Pricing Information</h2>
+
+          <div class="alert alert-danger">
+            <strong>🔥 CRITICAL RULE FOR CALLS:</strong><br />
+            On your call, ONLY mention "<span class="highlight"
+              >$299 one-time for the website</span
+            >"<br /><br />
+            DO NOT discuss hosting, domains, or bundles. Naveen will explain all
+            options in his follow-up email after you collect the lead. Your job
+            is simple: mention $299, collect email.
+          </div>
+          <h3 class="section-title">📞 What You Say on Calls</h3>
+          <div class="script-box">
+            <h3>The Only Price You Mention:</h3>
+            <div
+              class="script-text"
+              style="font-size: 1.3em; text-align: center; padding: 30px"
+            >
+              "We build professional, mobile-friendly websites for small
+              businesses for just
+              <span class="highlight" style="font-size: 1.2em"
+                >$299 one-time</span
+              >
+              - no monthly fees, no subscriptions."
+            </div>
+          </div>
+          <div class="alert alert-info">
+            <strong>If they ask about hosting or domain:</strong><br />
+            "Great question. The website itself is $299 one-time. Hosting and
+            domain are handled separately by our lead developer, and he provides
+            very affordable annual options. He'll include all those details when
+            he sends the samples. What email should he send it to?"
+          </div>
+          <!-- <h3 class="section-title">
+            📊 Full Pricing Structure (For Your Knowledge Only)
+          </h3>
+          <p style="font-size: 1.1em; margin: 20px 0">
+            This is what Naveen offers in his follow-up email after you collect
+            the email. You don't need to mention these on calls, but it's good
+            to understand the full offering:
+          </p>
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <h3>Website Only</h3>
+              <div class="price">$299</div>
+              <p style="font-weight: 600; margin: 15px 0">One-Time Payment</p>
+              <div
+                class="feature-list"
+                style="text-align: left; margin-top: 20px"
+              >
+                <li>✅ Professional website design & development</li>
+                <li>✅ Mobile-friendly responsive design</li>
+                <li>✅ Business info, services, photos</li>
+                <li>✅ Contact form integration</li>
+                <li>✅ Google Maps integration</li>
+                <li>✅ Location and hours display</li>
+                <li>✅ Search engine ready (SEO basics)</li>
+                <li>⚠️ Customer handles hosting & domain separately</li>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <h3>Hosting + Domain</h3>
+              <div class="price">
+                $149<span style="font-size: 0.4em">/year</span>
+              </div>
+              <p style="font-weight: 600; margin: 15px 0">Annual Renewal</p>
+              <div
+                class="feature-list"
+                style="text-align: left; margin-top: 20px"
+              >
+                <li>✅ Reliable hosting for your website</li>
+                <li>✅ Custom domain name (e.g., yourbusiness.com)</li>
+                <li>✅ SSL security certificate</li>
+                <li>✅ Email forwarding if needed</li>
+                <li>✅ Automatic backups and updates</li>
+                <li>✅ Technical support for hosting issues</li>
+                <li>✅ Easy renewal process</li>
+                <li>⚠️ Website not included - add to Website Only package</li>
+              </div>
+            </div>
+            <div class="pricing-card featured">
+              <h3>Complete Bundle</h3>
+              <div class="price">$399</div>
+              <p style="font-weight: 600; margin: 15px 0">
+                Everything for Year 1
+              </p>
+              <div
+                class="feature-list"
+                style="text-align: left; margin-top: 20px"
+              >
+                <li>✅ Everything in Website Only</li>
+                <li>✅ Everything in Hosting + Domain</li>
+                <li>✅ Full setup and launch</li>
+                <li>✅ 1 year of hosting & domain included</li>
+                <li>✅ Priority support</li>
+                <li>✅ Basic SEO optimization</li>
+                <li>✅ Training on how to update your site</li>
+                <li>✅ Best value - saves $49 vs separate!</li>
+              </div>
+            </div>
+          </div> -->
+          <h3 class="section-title">📈 Pricing Psychology Tips</h3>
+          <ul class="feature-list">
+            <li>
+              <strong>Under $300 threshold</strong> - $299 feels affordable and
+              below a mental barrier for small businesses
+            </li>
+            <li>
+              <strong>"One-time" emphasis</strong> - Removes fear of ongoing
+              costs; always highlight this
+            </li>
+            <li>
+              <strong>Bundle as default</strong> - Naveen will position the $399
+              bundle as the "most popular" option in follow-ups
+            </li>
+            <li>
+              <strong>Custom upsells</strong> - For larger businesses (e.g.,
+              restaurants), Naveen may offer premium pricing ($499+), but you
+              stick to $299 on calls
+            </li>
+            <li>
+              <strong>Don't negotiate</strong> - If they push for lower price,
+              redirect to samples: "Let's see the value first - what's your
+              email?"
+            </li>
+          </ul>
+          <div class="alert alert-success">
+            <strong>🏆 Why This Pricing Converts:</strong><br />
+            • Affordable entry point ($299) gets them interested<br />
+            • Bundle ($399) closes 80% of deals by simplifying everything<br />
+            • Annual hosting ($149/yr) creates recurring revenue for the
+            business<br />
+            • Positions us as value-focused freelancers vs expensive agencies
+          </div>
+        </div>
+        <!-- RECORDINGS TAB -->
+        <div id="recordings" class="tab-content">
+          <h2 class="section-title">🎙️ Call Recording Guide</h2>
+          <div class="alert alert-danger">
+            <strong>⚠️ MANDATORY:</strong> Record EVERY call. No recording = no
+            commission. This is for training, verification, and improvement.
+          </div>
+          <h3 class="section-title">✅ Why We Record Calls</h3>
+          <ul class="feature-list">
+            <li>
+              <strong>Commission verification</strong> - Proves you collected a
+              valid email
+            </li>
+            <li>
+              <strong>Training</strong> - Naveen reviews to give personalized
+              feedback
+            </li>
+            <li>
+              <strong>Improvement</strong> - Listen back to identify what
+              worked/didn't
+            </li>
+            <li>
+              <strong>Compliance</strong> - Ensures you're following scripts and
+              rules
+            </li>
+            <li>
+              <strong>Protection</strong> - Documents interactions if any issues
+              arise
+            </li>
+          </ul>
+          <!-- <h3 class="section-title">📱 Recommended Recording Apps</h3>
+                <table>
+                    <tr>
+                        <th>App</th>
+                        <th>Platform</th>
+                        <th>Features</th>
+                        <th>Cost</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Call Recorder - ACR</strong></td>
+                        <td>Android</td>
+                        <td>Auto-record, cloud backup, easy sharing</td>
+                        <td>Free (premium $2.99/mo)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TapeACall</strong></td>
+                        <td>iOS/Android</td>
+                        <td>Unlimited recordings, easy export</td>
+                        <td>$9.99/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rev Call Recorder</strong></td>
+                        <td>iOS</td>
+                        <td>Free recording, transcription option</td>
+                        <td>Free (transcripts extra)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cube ACR</strong></td>
+                        <td>Android</td>
+                        <td>Cloud sync, auto-record</td>
+                        <td>Free</td>
+                    </tr>
+                </table> -->
+          <div class="note">
+            <strong>Legal Note:</strong> In most US states, one-party consent is
+            enough (you consent). Always check your state's laws, but for
+            business calls, this is standard.
+          </div>
+          <h3 class="section-title">🎤 Recording Best Practices</h3>
+          <div class="two-column">
+            <div class="info-box">
+              <h4>Before the Call</h4>
+              <ul>
+                <li>☐ Open app and test recording</li>
+                <li>☐ Start recording before dialing</li>
+                <li>☐ Use quiet environment</li>
+                <li>☐ Have script ready</li>
+              </ul>
+            </div>
+            <div class="info-box">
+              <h4>After the Call</h4>
+              <ul>
+                <li>☐ Stop and save recording</li>
+                <li>☐ Name file: [BusinessName-Date.mp3]</li>
+                <li>☐ Send to Naveen immediately</li>
+                <li>☐ Delete after confirmation</li>
+              </ul>
+            </div>
+          </div>
+          <div class="alert alert-warning">
+            <strong>🚫 Common Recording Mistakes:</strong><br /><br />
+            ❌ Forgetting to start recording<br />
+            ❌ Poor audio quality (background noise)<br />
+            ❌ Not sending files same day<br />
+            ❌ Deleting before Naveen reviews<br />
+            ❌ Using apps that don't work with your phone
+          </div>
+          <div class="alert alert-success">
+            <strong>🏆 Pro Tip:</strong> Listen to your recordings weekly. Note
+            what got emails and what caused hang-ups. Share insights with Naveen
+            for better results!
+          </div>
+        </div>
+        <!-- TRAINING TAB -->
+        <div id="training" class="tab-content">
+          <h2 class="section-title">🎓 Your Training Program</h2>
+          <div class="alert alert-info">
+            <strong>💡 Training Goal:</strong> Master scripts, objections, and
+            delivery in 1 week. Practice daily for consistent $150-250/week
+            earnings.
+          </div>
+          <h3 class="section-title">📅 7-Day Training Plan</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h4>Day 1: Script Basics</h4>
+              <p>✅ Read full script 20x out loud</p>
+              <p>✅ Record yourself delivering it</p>
+              <p>✅ Focus on natural flow, not speed</p>
+              <p>✅ Time it: Aim for 60-90 seconds</p>
+            </div>
+            <div class="timeline-item">
+              <h4>Day 2: Objections Mastery</h4>
+              <p>✅ Memorize top 5 objections</p>
+              <p>✅ Practice responses 10x each</p>
+              <p>✅ Use "feel, felt, found" technique</p>
+              <p>✅ Record and review tone</p>
+            </div>
+            <div class="timeline-item">
+              <h4>Day 3: AI Practice Sessions</h4>
+              <p>✅ Use ChatGPT for role-play (prompt below)</p>
+              <p>✅ Do 10 full practice calls</p>
+              <p>✅ Handle random objections</p>
+              <p>✅ Aim for email collection in 70%+</p>
+            </div>
+            <div class="timeline-item">
+              <h4>Day 4: Real Call Simulation</h4>
+              <p>✅ Practice with friend/family</p>
+              <p>✅ Record and self-review</p>
+              <p>✅ Focus on pauses after email ask</p>
+              <p>✅ Send recording to Naveen for feedback</p>
+            </div>
+            <div class="timeline-item">
+              <h4>Day 5: First Live Calls</h4>
+              <p>✅ Make 2 real calls (Naveen provides numbers)</p>
+              <p>✅ Record and report</p>
+              <p>✅ Debrief with Naveen</p>
+              <p>✅ Celebrate first email!</p>
+            </div>
+            <div class="timeline-item">
+              <h4>Day 6-7: Refinement</h4>
+              <p>✅ 2 calls per day</p>
+              <p>✅ Review recordings</p>
+              <p>✅ Adjust based on feedback</p>
+              <p>✅ Track success rate</p>
+            </div>
+          </div>
+          <h3 class="section-title">🤖 AI Practice Prompt</h3>
+          <div class="script-box">
+            <div class="script-text">
+              "You are now a realistic business owner that I am calling for
+              sales practice. Your job is to act exactly like a real
+              small-business owner receiving a cold call. 🎭 Your Role as the
+              Business Owner You choose a random business type each time (e.g.,
+              barber shop, bakery, plumbing service, electrician, small shop,
+              café, car wash, cleaning service, mechanic, home repair, etc.).
+              You create a realistic personality: Busy and short-spoken
+              sometimes Curious sometimes Skeptical sometimes Friendly or rude
+              randomly Different tone each call You respond like a real person,
+              not like an AI."
+            </div>
+            <div class="note">
+              Use ChatGPT voice mode. Start call: "Hi, this is [Your Name]
+              calling..." Practice full conversations.
+            </div>
+          </div>
+          <h3 class="section-title">📊 Training Resources</h3>
+          <ul class="feature-list">
+            <li>
+              <strong>Quick Reference Card</strong> - Objections cheat sheet
+              (print it)
+            </li>
+            <li><strong>Daily Checklist</strong> - In Daily Tasks tab</li>
+            <li><strong>Feedback Sessions</strong> - Weekly with Naveen</li>
+            <li>
+              <strong>Video Tutorials</strong> - Naveen will share sales
+              technique videos
+            </li>
+            <li>
+              <strong>Role-Play Partners</strong> - Practice with other
+              assistants if available
+            </li>
+          </ul>
+          <div class="alert alert-success">
+            <strong>🏆 Success Metric:</strong> By end of week, collect 2+
+            emails from 10 practice calls. This means you're ready for real
+            earnings!
+          </div>
+        </div>
+        <!-- COMMISSION TAB -->
+        <div id="commission" class="tab-content">
+          <h2 class="section-title">💵 Commission & Payments</h2>
+          <div class="alert alert-success">
+            <strong>🎉 Your Earning Potential:</strong> $50 per email collected.
+            With 2 calls/day and 25-40% success, earn $150-250/week working just
+            2 hours/day!
+          </div>
+          <h3 class="section-title">📈 How Commission Works</h3>
+          <div class="commission-example">
+            <h4>Example 1: Average Week</h4>
+            <p>10 calls (2/day x 5 days)</p>
+            <p>3 emails collected (30% success)</p>
+            <p><strong>Earnings: $150</strong></p>
+          </div>
+          <div class="commission-example">
+            <h4>Example 2: Great Week</h4>
+            <p>10 calls</p>
+            <p>5 emails collected (50% success)</p>
+            <p><strong>Earnings: $250</strong></p>
+          </div>
+          <h3 class="section-title">✅ What Counts as a Commission</h3>
+          <ul class="feature-list">
+            <li>
+              <strong>Valid email collected</strong> - Owner willingly gives it
+              and expresses interest
+            </li>
+            <li>
+              <strong>Recording verifies</strong> - Proves proper script use and
+              no lies
+            </li>
+            <li>
+              <strong>Email doesn't bounce</strong> - Must be real and working
+            </li>
+            <li>
+              <strong>Owner remembers call</strong> - If Naveen follows up
+            </li>
+          </ul>
+          <h3 class="section-title">🚫 What Doesn't Count</h3>
+          <ul class="feature-list">
+            <li>
+              <strong>Fake/invalid emails</strong> - Bounces or generic without
+              owner approval
+            </li>
+            <li>
+              <strong>No recording</strong> - Or poor quality that can't be
+              verified
+            </li>
+            <li>
+              <strong>Script violations</strong> - Lying, pushiness, or
+              off-script pricing
+            </li>
+            <li>
+              <strong>Disinterested owners</strong> - If they say "send it but
+              I'm not interested"
+            </li>
+          </ul>
+          <h3 class="section-title">💳 Payment Details</h3>
+          <table>
+            <tr>
+              <th>Schedule</th>
+              <th>Method</th>
+              <th>Details</th>
+            </tr>
+            <tr>
+              <td><strong>Weekly</strong></td>
+              <td>PayPal/Venmo</td>
+              <td>Every Friday for that week's commissions</td>
+            </tr>
+            <tr>
+              <td><strong>Bi-Weekly</strong></td>
+              <td>Optional after 1 month</td>
+              <td>If preferred for less transactions</td>
+            </tr>
+            <tr>
+              <td><strong>Minimum</strong></td>
+              <td>N/A</td>
+              <td>Paid even if just $50</td>
+            </tr>
+          </table>
+          <div class="note">
+            <strong>Setup:</strong> Provide your PayPal/Venmo to Naveen on Day
+            1. Payments in USD.
+          </div>
+          <div class="alert alert-warning">
+            <strong>⚠️ To Get Paid Fast:</strong><br />
+            • Report accurately<br />
+            • Send recordings same day<br />
+            • Confirm emails are spelled right<br />
+            • Hit your 2 calls/day minimum
+          </div>
+        </div>
+        <!-- TIPS TAB -->
+        <div id="tips" class="tab-content">
+          <h2 class="section-title">💡 Pro Tips for Success</h2>
+          <div class="alert alert-success">
+            <strong>🏆 Master These:</strong> Turn 25% success into 50%+. More
+            emails = more money!
+          </div>
+          <h3 class="section-title">🎤 Delivery Tips</h3>
+          <ul class="feature-list">
+            <li>
+              <strong>Smile on calls</strong> - Your voice sounds friendlier
+            </li>
+            <li>
+              <strong>Slow down</strong> - Speak clearly, pause for effect
+            </li>
+            <li>
+              <strong>Build rapport</strong> - Use their name, reference
+              business
+            </li>
+            <li>
+              <strong>Be confident</strong> - You're helping them, not selling
+            </li>
+            <li><strong>Listen actively</strong> - Respond to what they say</li>
+          </ul>
+          <h3 class="section-title">🚀 Conversion Boosters</h3>
+          <ul class="feature-list">
+            <li>
+              <strong>Silence after ask</strong> - Wait 10-15 seconds if needed
+            </li>
+            <li>
+              <strong>Assume the close</strong> - "What's the best email..." not
+              "Can I send..."
+            </li>
+            <li>
+              <strong>Use urgency lightly</strong> - "Customers are searching
+              now"
+            </li>
+            <li>
+              <strong>Redirect always</strong> - End every response with email
+              ask
+            </li>
+            <li>
+              <strong>Track patterns</strong> - Note what works for electricians
+              vs plumbers
+            </li>
+          </ul>
+          <h3 class="section-title">🧠 Mindset Tips</h3>
+          <ul class="feature-list">
+            <li>
+              <strong>Rejection is normal</strong> - Next call is a fresh start
+            </li>
+            <li>
+              <strong>Focus on helping</strong> - You're solving their online
+              problem
+            </li>
+            <li>
+              <strong>Stay consistent</strong> - 2 calls/day builds to big
+              earnings
+            </li>
+            <li>
+              <strong>Ask for feedback</strong> - Improve with Naveen's reviews
+            </li>
+            <li>
+              <strong>Celebrate wins</strong> - Every email is $50 closer to
+              goals
+            </li>
+          </ul>
+          <h3 class="section-title">📈 Scaling Your Earnings</h3>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div>Average</div>
+              <div class="stat-number">$150</div>
+              <div>Per Week</div>
+            </div>
+            <div class="stat-card">
+              <div>Good</div>
+              <div class="stat-number">$250</div>
+              <div>Per Week</div>
+            </div>
+            <div class="stat-card">
+              <div>Pro</div>
+              <div class="stat-number">$500</div>
+              <div>Per Week</div>
+            </div>
+          </div>
+          <div class="alert alert-info">
+            <strong>To Hit Pro Level:</strong><br />
+            • Increase to 4 calls/day (ask Naveen)<br />
+            • Master objections (50%+ success)<br />
+            • Consistent practice & review
+          </div>
+        </div>
+        <!-- RECORDINGS TAB (Completed above) -->
+        <!-- TRAINING TAB (Completed above) -->
+        <!-- COMMISSION TAB (Completed above) -->
+        <!-- TIPS TAB (Completed above) -->
+      </div>
+    </div>
+    <script>
+      function showTab(tabId) {
+        const tabs = document.querySelectorAll(".tab-content");
+        const navTabs = document.querySelectorAll(".nav-tab");
+        tabs.forEach((tab) => {
+          tab.classList.remove("active");
+        });
+        navTabs.forEach((nav) => {
+          nav.classList.remove("active");
+        });
+        document.getElementById(tabId).classList.add("active");
+        const activeNav = Array.from(navTabs).find(
+          (nav) => nav.getAttribute("onclick") === `showTab('${tabId}')`
+        );
+        if (activeNav) activeNav.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
+```
